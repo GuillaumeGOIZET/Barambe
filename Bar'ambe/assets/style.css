@@ -1,0 +1,945 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Happy+Monkey&family=Quicksand:wght@300..700&display=swap");
+
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 44px;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 16px rgba(92, 58, 30, 0.08);
+}
+
+.Logo {
+  position: absolute;
+  left: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+nav {
+  background-color: #784f41;
+  border-radius: 40px;
+  padding: 35px 12px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 100%;
+}
+
+.menu li {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 20px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.menu li a {
+  display: block;
+  padding: 12px 22px;
+  color: inherit;
+  border-radius: 30px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.menu li.active a,
+.menu li a:hover {
+  background-color: #e09f7d;
+  color: #56392f;
+}
+
+.hero {
+  background-color: #e09f7d;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 44px 0px;
+  overflow: hidden;
+}
+
+.baseline {
+  display: inline-flex;
+  padding: 4px 18px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #784f41;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  width: fit-content;
+  height: 38px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero h1 {
+  font-family: "Fredoka", cursive;
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff;
+  max-width: 900px;
+  line-height: 1.1;
+  position: relative;
+  z-index: 3;
+  text-transform: uppercase;
+}
+
+.Singe-Hero {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: clamp(220px, 30vw, 380px);
+  object-fit: contain;
+  margin-top: 32px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+}
+
+.Courbe {
+  z-index: 8;
+  width: 99.1vw;
+}
+
+.a-propos {
+  display: flex;
+  flex-direction: row;
+  gap: 180px;
+  margin: 0 120px;
+  padding: 100px 0 80px;
+  align-items: center;
+}
+
+.img-a-propos {
+  width: 45%;
+  max-width: 560px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.text-a-propos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 0;
+}
+
+.text-a-propos .st {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1c311c;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+
+.text-a-propos h2 {
+  font-family: "Fredoka", cursive;
+  font-size: 44px;
+  font-weight: 700;
+  color: #1c311c;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.prm-p {
+  margin-bottom: 14px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.dxm-p {
+  margin-bottom: 32px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.trsm-p {
+  margin-bottom: 32px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.cta-galerie {
+  font-size: 17px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 30px;
+  color: #325b06;
+  background-color: #6ac00c;
+  display: inline-block;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.cta-galerie:hover {
+  background-color: #58a00a;
+  transform: translateY(-2px);
+}
+
+.carte {
+  margin-top: 120px;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.carte h2 {
+  font-size: clamp(60px, 9vw, 120px);
+  font-family: "Fredoka", cursive;
+  font-weight: 700;
+  color: #784f41;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.Singe-Boissons {
+  width: 80px;
+  height: auto;
+  position: absolute;
+  left: 956px;
+  top: 107px;
+  z-index: 2;
+}
+
+.boissons {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.boisson-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.boisson-blob {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.boisson-blob img {
+  width: 260px;
+  height: 380px;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+  margin-bottom: 0;
+}
+
+.boisson-blob img:hover {
+  transform: scale(1.04) translateY(-6px);
+}
+
+.boisson-name {
+  font-family: "Fredoka", cursive;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 10px;
+  line-height: 1;
+}
+
+.boisson-name.babou {
+  color: #e09f7d;
+}
+.boisson-name.pamplo {
+  color: #784f41;
+}
+.boisson-name.tacho {
+  color: #6ac00c;
+}
+
+.Galerie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.Galerie img {
+  display: block;
+  max-width: 100%;
+}
+
+.bdn-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  padding: 0 48px;
+  position: relative;
+}
+
+.contact {
+  width: 100%;
+  max-width: 1344px;
+  min-height: 340px;
+  padding: 56px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 14px;
+  background-color: #e09f7d;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact h2 {
+  color: #56392f;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contact > p {
+  color: #56392f;
+  font-family: "Fredoka", cursive;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.coordonnées {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.coordonnées a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #784f41;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.coordonnées a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(92, 58, 30, 0.25);
+}
+
+.singe-contact {
+  position: absolute;
+  right: 6%;
+  bottom: 0;
+  width: clamp(160px, 20vw, 280px);
+  object-fit: contain;
+  pointer-events: none;
+}
+
+footer {
+  background-color: #56392f;
+  border-radius: 50px 50px 50px 50px;
+  padding: 56px 80px 32px;
+  position: relative;
+  overflow: hidden;
+  max-width: 1344px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  position: relative;
+  margin: 80px auto 48px;
+  width: calc(100% - 96px);
+}
+
+footer::before {
+  content: "BARAMBE";
+  position: absolute;
+  bottom: 0px;
+  left: 25%;
+  transform: translateX(-50%);
+  font-family: "Fredoka", cursive;
+  font-size: clamp(70px, 10vw, 130px);
+  font-weight: 700;
+  color: #e09f7d;
+  opacity: 0.07;
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 0.06em;
+  z-index: 0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-col {
+  padding: 0 48px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-col:first-child {
+  padding-left: 0;
+}
+
+.footer-col:last-child {
+  border-right: none;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 20px;
+}
+
+.footer-col p,
+.footer-col li {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 2.2;
+}
+
+.footer-col ul {
+  padding: 0;
+}
+
+/* Icônes dans la colonne contact */
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 2.2;
+}
+
+.footer-contact-row img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+.footer-col a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 2.2;
+  display: block;
+}
+
+.footer-col a:hover {
+  color: #e09f7d;
+}
+
+/* Barre du bas */
+.footer-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  padding-top: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-bottom a {
+  font-family: "Quicksand", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-bottom a:hover {
+  color: #e09f7d;
+}
+
+.mobile-overlay {
+  display: none;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+/* ---- Tablette (max 1024px) ---- */
+@media (max-width: 1024px) {
+  /* Header */
+  header {
+    padding: 14px 24px;
+  }
+  .Logo {
+    left: 24px;
+    width: 38px;
+    height: 38px;
+  }
+  nav {
+    padding: 28px 10px;
+  }
+  .menu li {
+    font-size: 15px;
+  }
+  .menu li a {
+    padding: 10px 14px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 100px 32px 180px;
+  }
+  .hero h1 {
+    font-size: 56px;
+    max-width: 680px;
+  }
+
+  /* À propos */
+  .a-propos {
+    gap: 60px;
+    margin: 0 60px;
+    padding: 80px 0 60px;
+  }
+  .img-a-propos {
+    width: 42%;
+  }
+  .text-a-propos h2 {
+    font-size: 36px;
+  }
+
+  /* Boissons */
+  .boisson-blob {
+    width: 240px;
+    height: 340px;
+  }
+  .boisson-blob img {
+    width: 200px;
+    height: 300px;
+  }
+  .carte h2 {
+    font-size: 80px;
+  }
+  .Singe-Boissons {
+    left: calc(50% + 50px);
+    top: 60px;
+  }
+
+  /* Contact */
+  .bdn-contact {
+    padding: 0 32px;
+  }
+  .contact {
+    padding: 48px 56px;
+  }
+  .contact > p {
+    font-size: 32px;
+  }
+  .singe-contact {
+    width: clamp(130px, 18vw, 220px);
+  }
+
+  /* Footer */
+  footer {
+    margin: 60px 60px 0;
+    padding: 48px 56px 28px;
+  }
+  .footer-col {
+    padding: 0 32px;
+  }
+}
+
+/* ---- Mobile large (max 768px) ---- */
+@media (max-width: 768px) {
+  /* Header — burger */
+  header {
+    padding: 14px 20px;
+    justify-content: space-between;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  header.scrolled {
+    background: rgba(255, 255, 255, 0.92) !important;
+  }
+  .Logo {
+    display: block;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Bouton burger */
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 1100;
+    background: none;
+    color: #56392f;
+    border: none;
+    border-radius: 12px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background: #56392f;
+    border-radius: 4px;
+    transition:
+      transform 0.3s,
+      opacity 0.3s,
+      background 0.3s;
+  }
+  /* une fois sorti du hero : fond blanc, barres brunes */
+  header.scrolled .burger {
+    background: none;
+  }
+  header.scrolled .burger span,
+  .burger-light.scrolled span {
+    background: #56392f;
+  }
+
+  /* Overlay menu mobile */
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #56392f;
+    z-index: 1050;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+  }
+  .mobile-overlay.open {
+    display: flex;
+  }
+
+  /* "BARAMBE" filigrane dans l'overlay */
+  .mobile-overlay::before {
+    content: "BARAMBE";
+    position: absolute;
+    right: -10%;
+    top: 50%;
+    transform: translateY(-50%) translateX(40%) rotate(-90deg);
+    font-family: "Fredoka", cursive;
+    font-size: 200px;
+    font-weight: 700;
+    color: #e09f7d;
+    opacity: 0.12;
+    white-space: nowrap;
+    pointer-events: none;
+    letter-spacing: 0.06em;
+  }
+
+  /* Croix fermeture */
+  .mobile-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: #e09f7d;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  /* Liens de l'overlay */
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 88%;
+    z-index: 1;
+    background: transparent;
+  }
+  .mobile-nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 50px;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .mobile-nav a.active,
+  .mobile-nav a:hover {
+    background: #e09f7d;
+    color: #56392f;
+  }
+
+  /* Masquer la nav desktop */
+  nav {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 100px 24px 160px;
+    min-height: 90vh;
+  }
+  .hero h1 {
+    font-size: 40px;
+    max-width: 100%;
+  }
+  .hero::after {
+    height: 100px;
+  }
+  .hero > img:last-of-type {
+    width: clamp(180px, 55vw, 280px);
+    margin-top: 20px;
+  }
+
+  /* À propos — colonne */
+  .a-propos {
+    flex-direction: column;
+    gap: 36px;
+    margin: 0 24px;
+    padding: 60px 0 40px;
+  }
+  .img-a-propos {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .text-a-propos h2 {
+    font-size: 32px;
+  }
+  .text-a-propos {
+    font-size: 15px;
+  }
+
+  /* Boissons — colonne */
+  .carte {
+    margin-top: 60px;
+  }
+  .carte h2 {
+    font-size: clamp(40px, 12vw, 72px);
+    margin-bottom: 40px;
+  }
+  .Singe-Boissons {
+    width: 56px;
+    left: calc(50% + 36px);
+    top: 48px;
+  }
+  .boissons {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .boisson-blob {
+    width: 220px;
+    height: 300px;
+  }
+  .boisson-blob img {
+    width: 180px;
+    height: 260px;
+  }
+  .boisson-name {
+    font-size: 26px;
+  }
+
+  /* Galerie */
+  .Galerie {
+    margin-top: 48px;
+  }
+
+  /* Contact */
+  .bdn-contact {
+    padding: 0 16px;
+    margin-top: 48px;
+  }
+  .contact {
+    padding: 40px 32px;
+    border-radius: 32px;
+    min-height: auto;
+  }
+  .contact > p {
+    font-size: 26px;
+  }
+  .coordonnées {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .singe-contact {
+    display: none; /* singe caché sur mobile pour éviter le débordement */
+  }
+
+  /* Footer — colonne */
+  footer {
+    margin: 40px 16px 0;
+    padding: 40px 28px 24px;
+    border-radius: 32px 32px 32px 32px;
+  }
+  footer::before {
+    font-size: 52px;
+    left: 50%;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .footer-col {
+    padding: 24px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .footer-col:first-child {
+    padding-top: 0;
+  }
+  .footer-col:last-child {
+    border-bottom: none;
+  }
+  .footer-bottom {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ---- Mobile petit (max 480px) ---- */
+@media (max-width: 480px) {
+  .menu li a {
+    padding: 7px 8px;
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+  .baseline {
+    font-size: 13px;
+    height: 34px;
+  }
+
+  .carte h2 {
+    font-size: 38px;
+  }
+
+  .contact h2 {
+    font-size: 15px;
+  }
+  .contact > p {
+    font-size: 22px;
+  }
+  .coordonnées a {
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+
+  footer {
+    margin: 32px 0 0;
+    border-radius: 24px 24px 24px 24px;
+    padding: 32px 20px 20px;
+    position: relative;
+    margin: 80px auto 48px;
+    width: 398.29px;
+  }
+    .Singe-Boissons {
+    width: 56px;
+    left: 245px;
+    top: 35px;
+  }
+  @keyframes float {
+  0%,
+  100% {
+    transform: translateY(70px);
+  }
+  50% {
+    transform: translateY(110px);
+  }
+}
+}

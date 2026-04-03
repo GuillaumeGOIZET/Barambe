@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/img/Logo.png">
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>Bar'ambe</title>
+  </head>
+  <body>
+    <header id="main-header">
+      <a href="index.html">
+        <img class="Logo" src="/img/Logo.png" alt="Logo Bar'ambe" />
+      </a>
+      <nav>
+        <ul class="menu">
+          <li class="active"><a href="#hero">Accueil</a></li>
+          <li><a href="#a-propos">L'esprit</a></li>
+          <li><a href="#boissons">Nos boissons</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+        <button class="burger burger-light" id="burger-btn" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <!-- ==================== OVERLAY MENU MOBILE ==================== -->
+    <div class="mobile-overlay" id="mobile-overlay">
+      <button class="mobile-close" id="mobile-close" aria-label="Fermer">✕</button>
+      <nav class="mobile-nav">
+        <a href="#hero" class="active">Accueil</a>
+        <a href="#a-propos">L'esprit</a>
+        <a href="#boissons">Nos boissons</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <p class="baseline">Une aventure à découvrir</p>
+        <h1>BARAMBE UN BAR PAS COMME LES AUTRES</h1>
+        <img class="Singe-Hero" src="/img/Singe_Hero.png" alt="Dessin d'un singe méditant" />
+      </section>
+      <img class="Courbe" src="/img/Courbe_Hero.png" alt="Courbe" aria-hidden="true" />
+
+      <section class="a-propos" id="a-propos">
+        <img
+          class="img-a-propos"
+          src="/img/Image_APropos.png"
+          alt="Photos de l'intérieur du Bar"
+        />
+        <div class="text-a-propos">
+          <p class="st">À propos</p>
+          <h2>Entrez dans la planète des singes</h2>
+          <p class="prm-p">
+            Intégré au parcours du zoo, Bar'ambe est un espace de restauration
+            immersif offrant une pause gourmande face aux primates, dans un
+            cadre sécurisé et respectueux du bien-être animal.
+          </p>
+          <p class="dxm-p">
+            Pensé comme une parenthèse au cœur de la jungle, le lieu propose des
+            boissons chaudes et fraîches, cookies, brownies et douceurs
+            responsables, tout en prolongeant l'expérience de visite.
+          </p>
+          <p class="trsm-p">
+            Plus qu'un simple café, Bar'ambe est un espace d'observation et de
+            sensibilisation, où chaque pause contribue à soutenir la
+            conservation des primates.
+          </p>
+          <a class="cta-galerie" href="#galerie">Découvrir notre univers</a>
+        </div>
+      </section>
+
+      <section class="carte" id="boissons">
+        <h2>NOS BOISSONS</h2>
+        <img
+          class="Singe-Boissons"
+          src="/img/Singe_Boissons.png"
+          alt="Petit singe pendu"
+        />
+        <div class="boissons">
+          <div class="boisson-item">
+            <div class="boisson-blob babou">
+              <img src="/img/Babou.png" alt="Photo du cocktail Babou" />
+            </div>
+            <span class="boisson-name babou">Le babou</span>
+          </div>
+          <div class="boisson-item">
+            <div class="boisson-blob pamplo">
+              <img src="/img/Pamplo.png" alt="Photo du cocktail Pamplo" />
+            </div>
+            <span class="boisson-name pamplo">Le pamplo</span>
+          </div>
+          <div class="boisson-item">
+            <div class="boisson-blob tacho">
+              <img src="/img/Tacho.png" alt="Photo du cocktail Tacho" />
+            </div>
+            <span class="boisson-name tacho">Le tacho</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="Galerie" id="galerie">
+        <img
+          src="/img/Galerie.png"
+          alt="Galerie de photos de singes et du bar"
+        />
+      </section>
+
+      <section class="bdn-contact" id="contact">
+        <div class="contact">
+          <h2>Contact</h2>
+          <p>Pour plus d'info, n'hésitez pas<br />à nous joindre</p>
+          <div class="coordonnées">
+            <a href="tel:0649726413">06 49 72 64 13</a>
+            <a href="mailto:contact@barambe.com">contact@barambe.com</a>
+          </div>
+        </div>
+        <img
+          class="singe-contact"
+          src="/img/Singe_Contact.png"
+          alt="Singe décoratif"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-col">
+          <h3>Horaires</h3>
+          <p>Lun – Ven : 10h – 18h</p>
+          <p>Sam – Dim : 09h – 19h</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul>
+            <li class="footer-contact-row">
+              <img src="/img/Maps_Icon.png" alt="" />
+              <span>13 sentier Rue Félix Marchand, 51250</span>
+            </li>
+            <li class="footer-contact-row">
+              <img src="/img/Phone_Icon.png" alt="" />
+              <span>06 49 72 64 13</span>
+            </li>
+            <li class="footer-contact-row">
+              <img src="/img/Mail_Icon.png" alt="" />
+              <span>contact@barambe.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Notre site</h3>
+          <ul>
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#a-propos">L'esprit</a></li>
+            <li><a href="#boissons">Carte</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <a href="#">Mention légales</a>
+        <a href="#">Confidentialité</a>
+      </div>
+    </footer>
+
+   <script>
+      const header      = document.getElementById("main-header");
+      const burgerBtn   = document.getElementById("burger-btn");
+      const overlay     = document.getElementById("mobile-overlay");
+      const closeBtn    = document.getElementById("mobile-close");
+      const sections    = document.querySelectorAll("main section[id]");
+      const navLinks    = document.querySelectorAll(".menu li");
+      const mobileLinks = document.querySelectorAll(".mobile-nav a");
+
+      burgerBtn.addEventListener("click", () => {
+        overlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+      });
+
+      function closeOverlay() {
+        overlay.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      closeBtn.addEventListener("click", closeOverlay);
+      mobileLinks.forEach(link => link.addEventListener("click", closeOverlay));
+
+      function updateHeader() {
+        const heroH = document.querySelector(".hero").offsetHeight;
+        if (window.scrollY > heroH - 80) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      }
+      window.addEventListener("scroll", updateHeader);
+      updateHeader();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+
+            navLinks.forEach(li => li.classList.remove("active"));
+            const ad = document.querySelector(`.menu li a[href="#${id}"]`);
+            if (ad) ad.parentElement.classList.add("active");
+
+            mobileLinks.forEach(a => a.classList.remove("active"));
+            const am = document.querySelector(`.mobile-nav a[href="#${id}"]`);
+            if (am) am.classList.add("active");
+          }
+        });
+      }, { threshold: 0.4 });
+
+      sections.forEach(s => observer.observe(s));
+    </script>
+  </body>
+</html>
